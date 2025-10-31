@@ -1,0 +1,131 @@
+[
+  {
+    "id": "file-001",
+    "title": "User Manual v2.0",
+    "version": "2.0.0",
+    "releaseDate": "2024-01-15T00:00:00Z",
+    "size": 2457600,
+    "category": "Documentation",
+    "description": "Complete user manual for the application including installation guide and troubleshooting tips.",
+    "downloadUrl": "/downloads/user-manual-v2.0.pdf",
+    "relatedFileIds": ["file-002", "file-003"]
+  },
+  {
+    "id": "file-002",
+    "title": "Quick Start Guide",
+    "version": "1.5.0",
+    "releaseDate": "2024-01-10T00:00:00Z",
+    "size": 524288,
+    "category": "Documentation",
+    "description": "Brief introduction and quick setup instructions for new users.",
+    "downloadUrl": "/downloads/quick-start-guide.pdf",
+    "relatedFileIds": ["file-001"]
+  },
+  {
+    "id": "file-003",
+    "title": "API Reference Guide",
+    "version": "1.8.0",
+    "releaseDate": "2024-02-01T00:00:00Z",
+    "size": 3145728,
+    "category": "Documentation",
+    "description": "Comprehensive API documentation with examples and best practices.",
+    "downloadUrl": "/downloads/api-reference-v1.8.pdf",
+    "relatedFileIds": ["file-001", "file-007"]
+  },
+  {
+    "id": "file-004",
+    "title": "Desktop Application v3.2",
+    "version": "3.2.1",
+    "releaseDate": "2024-02-15T00:00:00Z",
+    "size": 52428800,
+    "category": "Software",
+    "description": "Latest version of the desktop application with bug fixes and new features.",
+    "downloadUrl": "/downloads/desktop-app-v3.2.1.exe",
+    "relatedFileIds": ["file-005", "file-006"]
+  },
+  {
+    "id": "file-005",
+    "title": "Desktop Application v3.1",
+    "version": "3.1.0",
+    "releaseDate": "2024-01-20T00:00:00Z",
+    "size": 51200000,
+    "category": "Software",
+    "description": "Previous stable version of the desktop application.",
+    "downloadUrl": "/downloads/desktop-app-v3.1.0.exe",
+    "relatedFileIds": ["file-004"]
+  },
+  {
+    "id": "file-006",
+    "title": "Mobile App v2.5",
+    "version": "2.5.0",
+    "releaseDate": "2024-02-10T00:00:00Z",
+    "size": 31457280,
+    "category": "Software",
+    "description": "Mobile application compatible with iOS and Android devices.",
+    "downloadUrl": "/downloads/mobile-app-v2.5.apk",
+    "relatedFileIds": ["file-004"]
+  },
+  {
+    "id": "file-007",
+    "title": "SDK Package v1.4",
+    "version": "1.4.2",
+    "releaseDate": "2024-01-25T00:00:00Z",
+    "size": 15728640,
+    "category": "Development",
+    "description": "Software development kit for building custom integrations and plugins.",
+    "downloadUrl": "/downloads/sdk-v1.4.2.zip",
+    "relatedFileIds": ["file-003", "file-008"]
+  },
+  {
+    "id": "file-008",
+    "title": "Code Examples Repository",
+    "version": "1.0.0",
+    "releaseDate": "2024-01-05T00:00:00Z",
+    "size": 1048576,
+    "category": "Development",
+    "description": "Collection of code examples and sample projects demonstrating common use cases.",
+    "downloadUrl": "/downloads/code-examples.zip",
+    "relatedFileIds": ["file-007", "file-009"]
+  },
+  {
+    "id": "file-009",
+    "title": "Development Tools v2.1",
+    "version": "2.1.0",
+    "releaseDate": "2024-02-05T00:00:00Z",
+    "size": 8388608,
+    "category": "Development",
+    "description": "Essential development tools and utilities for developers.",
+    "downloadUrl": "/downloads/dev-tools-v2.1.zip",
+    "relatedFileIds": ["file-007", "file-008"]
+  },
+  {
+    "id": "file-010",
+    "title": "Plugin Framework v1.2",
+    "version": "1.2.3",
+    "releaseDate": "2024-01-30T00:00:00Z",
+    "size": 4194304,
+    "category": "Development",
+    "description": "Framework for creating and managing custom plugins.",
+    "downloadUrl": "/downloads/plugin-framework-v1.2.3.zip"
+  },
+  {
+    "id": "file-011",
+    "title": "Migration Guide v3.0",
+    "version": "3.0.0",
+    "releaseDate": "2024-02-20T00:00:00Z",
+    "size": 1572864,
+    "category": "Documentation",
+    "description": "Step-by-step guide for migrating from version 2.x to 3.x.",
+    "downloadUrl": "/downloads/migration-guide-v3.0.pdf"
+  },
+  {
+    "id": "file-012",
+    "title": "CLI Tool v2.0",
+    "version": "2.0.0",
+    "releaseDate": "2024-02-12T00:00:00Z",
+    "size": 6291456,
+    "category": "Software",
+    "description": "Command-line interface tool for advanced users and automation.",
+    "downloadUrl": "/downloads/cli-tool-v2.0.tar.gz"
+  }
+]
