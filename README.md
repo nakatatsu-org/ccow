@@ -34,18 +34,7 @@ npm install -g @openai/codex
 codex exec 'Read ./specs/001-static-site-infrastructure/spec.md carefully. Audit the document and provide overall findings and concise impressions '
 ```
 
-## Usage
+### etc
 
-Do not use /speckit.constitution because already created.
-Do not use /speckit.clarify as possible because the plan should be fixed yourself.
-
-### /speckit.specify
-
-いわゆる要件定義を作成する。具体的手法、例えば技術仕様はまだ指定しない。
-
-
-### /speckit.plan
-
-いわゆる設計書を作成する。
-
+And there are some other small tools needed, but sorry —— please take care of those yourself...
 
