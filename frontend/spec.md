@@ -180,7 +180,7 @@ documents/frontend/technical-context.md 参照
 
 - TypeScript compilation passes with no errors
 - ESLint passes with no errors
-- All unit tests pass (Vitest)
+- All unit tests pass (Jest)
 - All E2E tests pass (Playwright)
 - Build succeeds without errors
 - No high/critical security vulnerabilities (npm audit)
