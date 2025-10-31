@@ -160,7 +160,7 @@ frontend/public/data/
 - TypeScript compilation: All components properly typed, FileMetadata interface matching JSON schema
 - ESLint: Passes with no errors (Next.js recommended config)
 - Build success: `npm run build` completes without errors, all pages prerendered
-- Unit tests: All Vitest tests pass
+- Unit tests: All Jest tests pass
 - E2E tests: All Playwright tests pass
 - Security: No high/critical vulnerabilities in npm audit
 - Local execution: All checks pass via `scripts/test-pr.sh`
@@ -214,29 +214,29 @@ echo ""
 echo "✅ All PR checks passed!"
 ```
 
-### Unit Testing (Vitest)
+### Unit Testing (Jest)
 
-**Framework**: Vitest (fast, Vite-powered, compatible with Next.js)
+**Framework**: Jest (standard testing framework, excellent Next.js integration)
 
-**Configuration**: `frontend/app/vitest.config.ts`
+**Configuration**: `frontend/app/jest.config.ts`
 ```typescript
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import type { Config } from 'jest'
+import nextJest from 'next/jest'
 
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    environment: 'jsdom',
-    globals: true,
-    setupFiles: './tests/setup.ts',
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+const createJestConfig = nextJest({
+  dir: './',
 })
+
+const config: Config = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testMatch: ['**/tests/**/*.test.ts?(x)'],
+}
+
+export default createJestConfig(config)
 ```
 
 **Test Files Location**: `frontend/app/tests/unit/`
@@ -248,7 +248,7 @@ export default defineConfig({
 **Test Files**:
 ```
 frontend/app/tests/
-├── setup.ts                     # Vitest setup (testing-library, matchers)
+├── setup.ts                     # Jest setup (testing-library, matchers)
 ├── unit/
 │   ├── lib/
 │   │   └── files.test.ts        # Data fetching utilities
@@ -264,15 +264,15 @@ frontend/app/tests/
 ```json
 {
   "devDependencies": {
-    "vitest": "latest",
-    "@vitejs/plugin-react": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/jest-dom": "latest",
-    "jsdom": "latest"
+    "@types/jest": "latest"
   },
   "scripts": {
-    "test:unit": "vitest run",
-    "test:unit:watch": "vitest"
+    "test:unit": "jest",
+    "test:unit:watch": "jest --watch"
   }
 }
 ```
