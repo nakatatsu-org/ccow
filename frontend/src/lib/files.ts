@@ -1,5 +1,4 @@
-import { readFileSync } from 'fs'
-import { join } from 'path'
+import filesData from '../../public/data/files.json'
 
 // FileMetadata interface matching the JSON schema
 export interface FileMetadata {
@@ -16,9 +15,7 @@ export interface FileMetadata {
 
 // Get all files from the JSON file
 export function getFiles(): FileMetadata[] {
-  const filePath = join(process.cwd(), 'public', 'data', 'files.json')
-  const fileContent = readFileSync(filePath, 'utf-8')
-  return JSON.parse(fileContent) as FileMetadata[]
+  return filesData as FileMetadata[]
 }
 
 // Get a single file by ID
